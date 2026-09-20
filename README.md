@@ -19,7 +19,7 @@ The dashboard asks how average property, societal, and personal crime rates rela
 
 ## Variables and source boundary
 
-The displayed variables are average property, society, and personal crime rates. The underlying data were sourced from the Washington State Statistical Analysis Center (WSSAC). This repository contains the final visualization and a sanitized narrative, not the original tables, row-level records, or dashboard build environment.
+I compare average property, society, and personal crime rates sourced from the Washington State Statistical Analysis Center (WSSAC). I provide the final visualization and a sanitized narrative, not the original tables, row-level records, or dashboard build environment.
 
 ## Workflow
 
