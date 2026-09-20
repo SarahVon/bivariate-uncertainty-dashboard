@@ -1,63 +1,38 @@
 # Bivariate & Uncertainty Dashboard
 
-A static visualization exploring relationships among crime categories and their spatial distribution across King County, Washington.
+A static visualization of relationships among property, societal, and personal crime rates and their spatial distribution across King County, Washington.
 
-## Contents
+## Purpose
 
-- [Purpose and questions](#purpose-and-questions)
-- [Variables and source boundary](#variables-and-source-boundary)
-- [Workflow](#workflow)
-- [Visualization sequence](#visualization-sequence)
-- [Interpretation](#interpretation)
-- [Limitations](#limitations)
-- [Reproducibility](#reproducibility)
-- [Repository contents](#repository-contents)
+I created this dashboard to compare pairwise crime-rate associations, show uncertainty around those comparisons, and place ten-year average rates in geographic context.
 
-## Purpose and questions
+## Data boundary
 
-The dashboard asks how average property, societal, and personal crime rates relate to one another, and how ten-year average rates vary across King County cities. It is an exploratory comparison, not a causal or predictive model.
-
-## Variables and source boundary
-
-I compare average property, society, and personal crime rates sourced from the Washington State Statistical Analysis Center (WSSAC). I provide the final visualization and a sanitized narrative, not the original tables, row-level records, or dashboard build environment.
+The measures come from the Washington State Statistical Analysis Center (WSSAC). This repository includes the final visualization and a sanitized narrative, not the original tables, row-level records, extraction code, or dashboard build environment.
 
 ## Workflow
 
 1. Prepare comparable average crime-rate measures.
-2. Calculate pairwise Pearson correlations for the category comparisons.
-3. Add scatterplots with correlation values and confidence bands to show association and uncertainty.
-4. Use point size to introduce a third-variable comparison in the bivariate views.
-5. Aggregate ten-year average rates by King County city for the spatial view.
-6. Apply a stepped diverging color scale, larger/darker points, and labels for the five highest-rate cities while retaining all cities.
-
-## Visualization sequence
-
-### Correlation and uncertainty
-
-The correlation matrix establishes the relationships among the three categories. Scatterplots then show the paired observations, Pearson’s *r*, confidence bands, and an additional size encoding.
-
-### Spatial comparison
+2. Calculate pairwise Pearson correlations.
+3. Add scatterplots with correlation values and confidence bands.
+4. Use point size for a third-variable comparison.
+5. Aggregate ten-year averages by King County city.
+6. Apply a stepped diverging scale and label the five highest-rate cities while retaining all cities.
 
 ![Bivariate crime and uncertainty dashboard](bivariate-uncertainty-dashboard.png)
 
-*Static dashboard combining correlation views, uncertainty bands, and a county map of average crime rates.*
+*Static dashboard combining correlation views, uncertainty bands, and a county map.*
 
-The map adds geographic context to the category comparisons and emphasizes the highest-rate cities without removing the rest of the study area.
+## Interpretation and limitations
 
-## Interpretation
-
-The artifact supports comparison of association, uncertainty, and geographic pattern. Correlation values describe linear association in the summarized data; they do not establish that one crime category causes another. City-level patterns describe averages and should not be read as within-city conditions.
-
-## Limitations
-
-Aggregation can hide within-city variation, missingness, and changes in reporting practices. Crime patterns may also reflect socioeconomic conditions, policing, and other factors not represented here. The published artifact is static, so interactive filtering and underlying values are unavailable.
+Correlation describes linear association in summarized data; it does not establish causation. City averages can conceal within-city variation, missingness, and reporting changes. Crime patterns may also reflect factors not represented here. The static artifact does not provide interactive filtering or underlying values.
 
 ## Reproducibility
 
-The original source tables, extraction date, transformation code, and dashboard environment are not published. Reproduction requires obtaining the relevant WSSAC data under current terms, documenting the extraction and aggregation choices, then rebuilding the correlation matrix, Pearson *r* and confidence-band views, and city map. Exact numeric recreation is therefore bounded by those unavailable inputs.
+Obtain the relevant WSSAC data under current terms, document the extraction and aggregation choices, then rebuild the correlation matrix, Pearson-*r* and confidence-band views, and city map. Exact numeric recreation is bounded by the unavailable source tables and build environment.
 
 ## Repository contents
 
-- `bivariate-uncertainty-dashboard.png` — static dashboard export
-- `project-notes.md` — concise provenance and design notes
-- `README.md` — methods, interpretation, and reproducibility boundary
+- `bivariate-uncertainty-dashboard.png`
+- `project-notes.md`
+- `README.md`
