@@ -10,6 +10,12 @@ The dashboard combines a bivariate-style correlation view with scatterplots, Pea
 - `bivariate-uncertainty-dashboard.png` — final static dashboard image.
 - `project-notes.md` — concise project narrative and provenance notes.
 
+## Visualization
+
+![Bivariate crime and uncertainty dashboard](bivariate-uncertainty-dashboard.png)
+
+*Static dashboard combining correlation views, uncertainty bands, and a county map of average crime rates.*
+
 ## Data sources and permissions
 The underlying crime data were sourced from the Washington State Statistical Analysis Center (WSSAC). This repository contains the final visualization and a sanitized narrative, not the original source tables. Confirm current source terms and attribution requirements before reuse.
 
