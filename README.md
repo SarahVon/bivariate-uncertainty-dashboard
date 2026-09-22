@@ -89,7 +89,6 @@ This dashboard is best understood as an exploratory view of summarized crime dat
 
 ```text
 bivariate-uncertainty-dashboard.png   Static Tableau dashboard export
-project-notes.md                      Supporting project narrative
 README.md                             Project overview, methods, and interpretation
 ```
 
